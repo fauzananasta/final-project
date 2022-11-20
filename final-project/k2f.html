@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Final Project</title>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a
+          class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+          href="#"
+          >T M S</a>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-primary"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <a href="dashboard.html" class="nav-link px-3 active">
+                <span class="me-2"><i class="bx bxs-home"></i></span>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <hr class="dropdown-divider bg-light"/>
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#layouts"
+              >
+                <span class="me-2"><i class="bx bxs-bar-chart-alt-2"></i></span>
+                <span>Laporan</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="layouts">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3 sidebar-link"
+                    data-bs-toggle="collapse"
+                    href="#layouts">
+
+                      <span class="me-2"
+                        ><i class="bx bxs-bar-chart-alt-2"></i
+                      ></span>
+                      <span>2018</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bx bxs-bar-chart-alt-2"></i
+                      ></span>
+                      <span>2019</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bx bxs-bar-chart-alt-2"></i
+                      ></span>
+                      <span>2020</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bx bxs-bar-chart-alt-2"></i
+                      ></span>
+                      <span>2021</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bx bxs-bar-chart-alt-2"></i
+                      ></span>
+                      <span>2022</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            </li>
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#supply"
+              >
+                <span class="me-2"><i class="bx bxs-spreadsheet"></i></span>
+                <span>Supply</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down "></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="supply">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="k2f.html" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bx bxs-spreadsheet"></i></span>
+                      <span>K2F</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="k2fblack.html" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bx bxs-spreadsheet"></i></span>
+                      <span>K2F Black</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            </li>
+            <li>
+              <a href="tabel.html" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-table"></i></span>
+                <span>Tabel</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+            
+            <li>
+              <a href="#akun" class="nav-link px-3 sidebar-link" data-bs-toggle="collapse">
+                <span class="me-2"><i class="bx bx-user-circle"></i></span>
+                <span>Akun</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+                <div class="collapse" id="akun">
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="#" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class='bx bxs-cog'></i></span>
+                        <span>Logout</span>
+                      </a>
+                    </li>
+                  </div>
+                </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Data Tabel
+              </div>
+              
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    id="example"
+                    class="col-mb table-responsive table-bordered-lg border-dark"
+                  >
+
+                  <div class="container">
+                    <div class="deskripsi">
+                      <h2>TOTAL SUPPLY K2F</h2>
+                      <p>Periode tanggal <input type="text"></p>
+                      <br>
+                    </div>
+                  </div>
+                  
+                  <thead>
+                    <tr>
+                      <th>NO</th>
+                      <th>NAMA SUBJIG</th>
+                      <th colspan="3">LINE</th>
+                      <th>KETERANGAN</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <thead>
+                  <tr>
+                      <th></th>
+                      <th></th>
+                      <th>A</th>
+                      <th>B</th>
+                      <th>C</th>
+                  </tr>
+                </thead>
+                  <tr>
+                      <td>1</td>
+                      <td>SPDMT A</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      
+                  </tr>
+                  <tr >
+                      <td>2</td>
+                      <td>SPDMT B</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>Ring SPDMT</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                    </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>Front R</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>Front L</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>Front TOP</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td>Fender</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>8</td>
+                      <td>Under R</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>Under L</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td>Lid L Pocket</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>11</td>
+                      <td>Body R</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>12</td>
+                      <td>Body L</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>13</td>
+                      <td>RR Center Upper</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>14</td>
+                      <td>RR Center</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>15</td>
+                      <td>Center</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>16</td>
+                      <td>Inner Upper</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  <tr>
+                      <td>17</td>
+                      <td>Inner</td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                      <td><input type="text" class="form-control bg-light"></td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  <hr>
+                  <button class="btn btn-danger" src="#">Dowload Excel</button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

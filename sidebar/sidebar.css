@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Ubuntu',sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    background: #eee;
+    height: 100%;
+}
+
+nav ul{
+    position: relative;
+    list-style-type: none;
+}
+
+nav ul li a {
+    transition: .5s ease;
+    display: flex;
+    padding: 10px 30px;
+    height: 50px;
+}
+
+nav ul ul {
+    position: absolute;
+    left: 250px;
+    width: 200px;
+    top: 0; 
+    background: #039BE5;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.header-box {
+    background: rgb(104, 89, 89);
+    margin-bottom: 15px;
+}
+#side_nav{
+    background: #039BE5;
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.3s;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+
+hr.h-color{
+    background: #eee;
+}
+
+.sidebar li.active{
+    background: #eee;
+    border-radius: 8px;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover{
+    color: #000;
+}
+
+.sidebar li a{
+    color: #fff;
+}
+
+@media(max-width: 767px){
+#side_nav{
+    margin-left: -250px;
+    position: absolute;
+    min-height: 100vh;
+    z-index: 1;
+}
+#side_nav.active{
+    margin-left: 0;
+}
+}
+
+.container-fluid {
+    background: #039BE5;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+ul ul li a{
+    padding-left: 80px;
+}
