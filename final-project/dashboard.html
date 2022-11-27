@@ -652,52 +652,202 @@
             <h4>Dashboard</h4>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <div class="card bg-primary text-white h-100">
-              <div class="card-body py-5">Primary Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
+      
+        <section class="section dashboard">
+          <div class="row">
+    
+            <!-- Left side columns -->
+            <div class="col-lg-8">
+              <div class="row">
+                
+                <!-- Sales Card -->
+                <div class="col-xxl-4 col-md-5">
+                  <div class="card info-card sales-card">
+    
+                    <div class="filter">
+                      <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li class="dropdown-header text-start">
+                          <h6>Filter</h6>
+                        </li>
+    
+                        <li><a class="dropdown-item" href="#">Today</a></li>
+                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                      </ul>
+                    </div>
+    
+                    <div class="card-body">
+                      <h5 class="card-title">New Orders <span>| Today</span></h5>
+    
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i class="bi bi-cart"></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6>145</h6>
+                          <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+    
+                        </div>
+                      </div>
+                    </div>
+    
+                  </div>
+                </div><!-- End Sales Card -->
+
+                <!-- Custumers Card -->
+                <div class="col-xxl-4 col-md-5">
+                  <div class="card info-card sales-card">
+    
+                    <div class="filter">
+                      <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li class="dropdown-header text-start">
+                          <h6>Filter</h6>
+                        </li>
+    
+                        <li><a class="dropdown-item" href="#">Today</a></li>
+                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                      </ul>
+                    </div>
+    
+                    <div class="card-body">
+                      <h5 class="card-title">Customers <span>| Today</span></h5>
+    
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i class="bi bi-cart"></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6>145</h6>
+                          <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Customer Card -->
+    
+                <!-- Revenue Card -->
+                <div class="col-xxl-4 col-md-5">
+                  <div class="card info-card revenue-card">
+    
+                    <div class="filter">
+                      <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li class="dropdown-header text-start">
+                          <h6>Filter</h6>
+                        </li>
+    
+                        <li><a class="dropdown-item" href="#">Today</a></li>
+                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                      </ul>
+                    </div>
+    
+                    <div class="card-body">
+                      <h5 class="card-title">Revenue <span>| This Month</span></h5>
+    
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6>$3,264</h6>
+                          <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3 mb-3">
-            <div class="card bg-warning text-dark h-100">
-              <div class="card-body py-5">Warning Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
+        </section>
+            
+            <br>
+
+            <section class="section">
+              <div class="row">
+        
+                <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Line Chart</h5>
+        
+                      <!-- Line Chart -->
+                      <canvas id="lineChart" style="max-height: 400px;"></canvas>
+                      <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          new Chart(document.querySelector('#lineChart'), {
+                            type: 'line',
+                            data: {
+                              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                              datasets: [{
+                                label: 'Line Chart',
+                                data: [65, 59, 80, 81, 56, 55, 40],
+                                fill: false,
+                                borderColor: 'rgb(75, 192, 192)',
+                                tension: 0.1
+                              }]
+                            },
+                            options: {
+                              scales: {
+                                y: {
+                                  beginAtZero: true
+                                }
+                              }
+                            }
+                          });
+                        });
+                      </script>
+                      <!-- End Line CHart -->
+        
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Orders Chart</h5>
+        
+                      <!-- Orders Chart -->
+                      <canvas id="OrdersChart" style="max-height: 400px;"></canvas>
+                      <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          new Chart(document.querySelector('#OrdersChart'), {
+                            type: 'line',
+                            data: {
+                              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                              datasets: [{
+                                label: 'Line Chart',
+                                data: [65, 59, 80, 81, 56, 55, 40],
+                                fill: false,
+                                borderColor: 'rgb(75, 192, 192)',
+                                tension: 0.1
+                              }]
+                            },
+                            options: {
+                              scales: {
+                                y: {
+                                  beginAtZero: true
+                                }
+                              }
+                            }
+                          });
+                        });
+                      </script>
+                      <!-- End Orders CHart -->
+        
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card bg-success text-white h-100">
-              <div class="card-body py-5">Success Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <div class="card bg-danger text-white h-100">
-              <div class="card-body py-5">Danger Card</div>
-              <div class="card-footer d-flex">
-                View Details
-                <span class="ms-auto">
-                  <i class="bi bi-chevron-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>        
-        </div>
+            </section>
+            
       </div>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
